@@ -1,8 +1,8 @@
-### Required Libraries ###
+#Libraries
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 
-### Functionality Helper Functions ###
+# Functionality helper functions
 def parse_int(n):
     """
     Securely converts a non-integer value to integer.
@@ -152,7 +152,7 @@ def close(session_attributes, fulfillment_state, message):
     return response
 
 
-### Intents Handlers ###
+# Intents Handlers
 def recommend_portfolio(intent_request):
     """
     Performs dialog management and fulfillment for recommending a portfolio.
@@ -206,7 +206,7 @@ def recommend_portfolio(intent_request):
     )   
 
 
-### Intents Dispatcher ###
+# Intents Dispatcher
 def dispatch(intent_request):
     """
     Called when the user specifies an intent for this bot.
@@ -221,7 +221,7 @@ def dispatch(intent_request):
     raise Exception("Intent with name " + intent_name + " not supported")
 
 
-### Main Handler ###
+# Main Handler
 def lambda_handler(event, context):
     """
     Route the incoming request based on intent.
